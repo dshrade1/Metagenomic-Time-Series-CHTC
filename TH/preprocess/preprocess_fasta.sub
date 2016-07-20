@@ -1,0 +1,20 @@
+# submit file to preprocess Trout Bog Hypolimnion metagenomic read fasta files.
+
+universe = vanilla 
+
+executable = preprocess_fasta.sh
+arguments = $(read)
+output = run_output/$Fn(read).out
+log = run_output/$Fn(read).log 
+error = run_output/$Fn(read).err
+
+# initialdir = ../map
+transfer_input_files = ../../python, FastaMLtoSL.py, list_files.py
+# transfer_output_files = $(read)/
+requirements = (Target.HasGluster == true)
+
+request_cpus= 1
+request_memory = 6 GB
+request_disk =  10 GB
+
+queue read from TH_fasta_ID_test.txt

@@ -1,0 +1,11 @@
+# dag help here! http://research.cs.wisc.edu/htcondor/manual/v7.6/2_10DAGMan_Applications.html
+
+JOB preprocess preprocess.sub
+
+SCRIPT POST preprocess concatenate.sh
+
+JOB mapping run_bbmap.sub
+
+VAR mapping minid="76"
+
+PARENT preprocess CHILD mapping
