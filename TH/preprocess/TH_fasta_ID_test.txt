@@ -1,3 +1,0 @@
-IHPI.fasta
-IHPN.fasta
-IHXP.fasta
