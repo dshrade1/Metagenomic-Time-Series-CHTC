@@ -11,20 +11,18 @@ rm $1
 mv $1.out $1
 
 # make a folder for each metagenome
-fourletter=${1:0:4}
-mkdir ${fourletter}
-split -l 140000 $1 ${fourletter}/${fourletter}
-
+code=`echo "$1" | cut -d'.' -f1`
+mkdir ${code}
+split -l 140000 $1 ${code}/${code}
 
 # create a read file list (for the mapping step)
-python ./list_files.py ${fourletter}
+python ./list_files.py ${code}
 # move read file list to folder of the metagenome
-mv readFileList.txt ${fourletter}/
+mv readFileList.txt ${code}/
 
-
-
-tar -zcvf ${fourletter}.tar.gz ${fourletter}/
-rm -r ${fourletter}
+# tar it up
+tar -zcvf ${code}.tar.gz ${code}/
+rm -r ${code}
 rm $1
 
 

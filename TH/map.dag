@@ -1,11 +1,25 @@
 # dag help here! http://research.cs.wisc.edu/htcondor/manual/v7.6/2_10DAGMan_Applications.html
 
-JOB preprocess preprocess.sub
+JOB preprocess_fasta preprocess_fasta.sub DIR TH/preprocess
 
-SCRIPT POST preprocess concatenate.sh
+JOB preprocess_fastq preprocess_fastq.sub DIR TH/preprocess
 
-JOB mapping run_bbmap.sub
+SCRIPT POST preprocess preprocess_postscript.sh DIR TH/preprocess
 
-VAR mapping minid="76"
+JOB map run_bbmap.sub DIR TH/map
 
-PARENT preprocess CHILD mapping
+SCRIPT POST map map_postscript.sh DIR TH/map
+
+JOB count count.sub TH/count
+
+PARENT preprocess CHILD map
+
+PARENT map CHILD count
+
+VARS preprocess_fasta 
+
+VARS preprocess_fastq
+
+VARS map minid="92"
+
+VARS map username="dgshrader"

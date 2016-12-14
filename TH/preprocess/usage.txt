@@ -21,7 +21,7 @@ Here is the output for Disk and Memory usage of IHPN
            Memory (MB)          :     2690     6144	 6144
 
 
-Here is the outupt for IHPI
+Here is the outupt for IHPI (143M fasta file)
 006 (21596379.001.000) 07/14 15:37:38 Image size of job updated: 185568
         182  -  MemoryUsage of job (MB)
         185568  -  ResidentSetSize of job (KB)
