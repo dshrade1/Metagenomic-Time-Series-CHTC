@@ -1,0 +1,16 @@
+# condor_submit -i interactive_python_build.sub
+
+universe = vanilla
+log = interactive_python_build.log
+
+output = process.out
+error = process.err
+
+transfer_input_files = ../../global/python,../../global/HTSeq-0.6.1
+requirements = (Target.HasGluster == true) && (OpSys == "LINUX") && (OpSysMajorVer == 6)
+
+request_cpus = 1
+request_memory = 6GB
+request_disk = 6GB
+
+queue

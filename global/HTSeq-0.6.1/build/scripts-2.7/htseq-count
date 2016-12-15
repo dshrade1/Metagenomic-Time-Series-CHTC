@@ -1,0 +1,5 @@
+#!/var/lib/condor/execute/slot1/dir_16550/python/bin/python
+
+import HTSeq.scripts.count
+
+HTSeq.scripts.count.main()
