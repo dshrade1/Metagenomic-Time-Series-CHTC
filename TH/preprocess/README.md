@@ -1,8 +1,8 @@
 To preprocess metagenome files, submit:
 
 condor_submit preprocess_fasta.sub  
-
-condor_submit preprocess_fastq.sub
+condor_submit preprocess_fastq.sub  
+preprocess_postscript.sh
 
 Edits you may wish to make:
 
