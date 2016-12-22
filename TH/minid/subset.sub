@@ -1,0 +1,17 @@
+universe = vanilla
+
+executable = subset.sh
+arguments = $(read)
+output = run_output/$Fn(read).out
+log = run_output/$Fn(read).log
+error = run_output/$Fn(read).err
+
+transfer_input_files = ../../../global/python, ../../../global/FastaMLtoSL.py, subsampler.py
+requirements = (Target.HasGluster == true) && (OpSys == "LINUX") && (OpSysMajorVer == 6)
+
+request_cpus= 1
+request_memory = 20 GB
+request_disk =  20 GB
+
+queue read from ../../preprocess/TE_ID.txt
+

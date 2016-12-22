@@ -1,0 +1,20 @@
+# submit file for mapping a random sample of metagenome reads to the coassembly.
+# purpose: identify a best minid value for mapping
+#
+universe = vanilla
+#
+executable = run_bbmap_random.sh
+arguments = $(file) $(numbers)
+log = $(file)_$(numbers).log
+error = $(file)_$(numbers).err
+output = $(file)_$(numbers).out
+#
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = ../../../global/bbmap_only,$(file)
+#
+request_cpus= 1
+request_memory = 10 GB
+request_disk = 10 GB
+#
+queue file,numbers from randomReadFileListNumbers.txt

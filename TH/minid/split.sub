@@ -1,0 +1,14 @@
+universe = vanilla
+
+executable = split.sh
+output = run_output/split.out
+log = run_output/split.log
+error = run_output/split.err
+
+transfer_input_files = random_MG.fasta
+
+request_cpus= 1
+request_memory = 10 GB
+request_disk =  10 GB
+
+queue 1
