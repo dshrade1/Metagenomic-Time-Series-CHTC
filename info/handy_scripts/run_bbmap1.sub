@@ -1,0 +1,37 @@
+# run this if 1 single file mapping is lagging
+# to run, move this script to map directory
+# and copy the single file to map directory (i.e., not the file in that metagenome's subfolder)
+# submit file for mapping metagenomic time series reads to the coassembly.
+# run from the TroutBogReads folder
+# this sets up the relative location - you can run condor_submit from folders within the submit node
+#
+
+# minid = 76
+
+universe = vanilla
+log = $(file).log
+error = $(file).err
+#
+executable = run_bbmap.sh
+# arguments = $(file) $(minid)
+arguments = $(file)
+output = $(file).out
+# $cluster-> $dir
+# $process->$file
+#
+# initialdir = $(dir)
+# initialdir allows us to perform this action within each metagenome folder
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = ../../global/bbmap_only,$(file)
+#
+request_cpus= 1
+request_memory = 10 GB
+request_disk = 6 GB
+# +WantFlocking = true
+# +WantGlideIn = true
+# Requirements = Target.PoolName =!= "CHTC"
+#
+queue file from readFileList1.txt
+# Note: readFileList1 contains only the name of the file, not the metagenome directory
+# e.g., one line could be simply "IHPNaa"
