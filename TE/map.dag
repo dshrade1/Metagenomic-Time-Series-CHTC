@@ -1,0 +1,17 @@
+# dag help here! http://research.cs.wisc.edu/htcondor/manual/v7.6/2_10DAGMan_Applications.html
+
+JOB preprocess /home/dgshrader/Metagenomic-Time-Series-CHTC/TH/preprocess/preprocess_fasta.sub
+
+SCRIPT POST preprocess /home/dgshrader/Metagenomic-Time-Series-CHTC/TH/preprocess/preprocess_postscript.sh
+
+JOB map /home/dgshrader/Metagenomic-Time-Series-CHTC/TH/map/run_bbmap.sub
+
+SCRIPT POST map /home/dgshrader/Metagenomic-Time-Series-CHTC/TH/map/map_postscript.sh
+
+JOB count /home/dgshrader/Metagenomic-Time-Series-CHTC/TH/count/count.sub
+
+PARENT preprocess CHILD map
+
+PARENT map CHILD count
+
+# VAR mapping minid="76"
