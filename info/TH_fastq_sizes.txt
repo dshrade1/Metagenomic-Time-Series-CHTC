@@ -1,0 +1,15 @@
+3381659629	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0589_93745_TroutBog_Hypo_Jul_13_2005.fastq
+3339610161	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0589_93770_TroutBog_Hypo_Jul_13_2005.fastq
+3250415973	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0586_93745_TroutBog_Hypo_Jun_01_2005.fastq
+3215804295	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0586_93770_TroutBog_Hypo_Jun_01_2005.fastq
+3214429432	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0591_93745_TroutBog_Hypo_Aug_11_2005.fastq
+3169340394	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0591_93770_TroutBog_Hypo_Aug_11_2005.fastq
+3124956961	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0598_93745_TroutBog_Hypo_Jun_07_2012.fastq
+3105607834	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0588_93745_TroutBog_Hypo_Jun_29_2005.fastq
+3081598630	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0598_93770_TroutBog_Hypo_Jun_07_2012.fastq
+3066591893	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0588_93770_TroutBog_Hypo_Jun_29_2005.fastq
+2903358235	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0590_93745_TroutBog_Hypo_Jul_27_2005.fastq
+2860694876	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0590_93770_TroutBog_Hypo_Jul_27_2005.fastq
+2286698496	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0599_93745_TroutBog_Hypo_Jun_21_2012.fastq
+1806957631	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0587_93745_TroutBog_Hypo_Jun_22_2005.fastq
+1782140284	/mnt/gluster/dgshrader/MergedReads-TroutBog/fastq/H0587_93770_TroutBog_Hypo_Jun_22_2005.fastq
