@@ -1,0 +1,28 @@
+# run from the MendotaReads folder
+# this sets up the relative location - you can run condor_submit from folders within the submit node
+#
+universe = vanilla
+log = metagenomic_mapping_$(file).log
+error = metagenomic_mapping_$(file).err
+#
+executable = run_bbmap_test1.sh
+arguments = $(file)
+output = metagenomic_mapping_$(file).out
+# $cluster-> $dir
+# $process->$file
+#
+initialdir = $(dir)
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = ../bbmap_only,$(file)
+#
+request_cpus= 1
+request_memory = 1 GB
+request_disk = 1 GB
+#
+# do these variables need to be defined at beginning or have they already been defined?
+queue dir,file from readFileList_test.txt
+#
+# submit file for mapping metagenomic time series reads to the coassembly.
+
+
