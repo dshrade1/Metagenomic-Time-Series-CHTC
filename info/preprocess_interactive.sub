@@ -1,0 +1,16 @@
+# condor_submit -i interactive.sub
+
+universe = vanilla
+log = interactive.log
+
+output = process.out
+error = process.err
+
+transfer_input_files = ../../global/python, preprocess_fastq_1.sh, FastaMLtoSL.py, fastq2fasta.py, removesmalls.pl, ../../global/list_files.py
+requirements = (Target.HasGluster == true) && (OpSys == "LINUX") && (OpSysMajorVer == 6)
+
+request_cpus = 1
+request_memory = 6GB
+request_disk = 6GB
+
+queue
