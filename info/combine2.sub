@@ -1,0 +1,21 @@
+universe = local
+# log = $(file).log
+# error = $(file).err
+
+executable = combine.sh
+arguments = $(dir)
+output = $(dir).out
+
+initialdir = $(dir)
+should_transfer_files = NO
+
+transfer_input_files = ../bbmap_only,$(file)
+
+request_cpus= 1
+request_memory = 6 GB
+request_disk = 3 GB
+
++WantFlocking = true
++WantGlideIn = true
+
+queue 1
